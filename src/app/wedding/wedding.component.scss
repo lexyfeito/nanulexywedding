@@ -1,0 +1,28 @@
+.wedding-message {
+  font-size: 2.5rem;
+  line-height: 1.2992;
+}
+
+.ceremony-info, reception-info {
+  font-size: 1rem;
+}
+
+.ceremony-address, .reception-address {
+  font-size: 1.6rem;
+  line-height: 1.3663999999999998;
+}
+
+
+img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+  .wedding-message {
+    font-size: 1.5rem;
+  }
+
+  .ceremony-address, .reception-address, .ceremony-info, .reception-info {
+    text-align: center;
+  }
+}

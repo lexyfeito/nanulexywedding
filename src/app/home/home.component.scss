@@ -1,0 +1,62 @@
+:host {
+  //display: flex;
+  //flex-direction: column;
+  //flex: 1;
+}
+
+.nanu-lexy {
+  margin: 50px 0;
+  .divider {
+    height: 1px;
+    background-color: #000;
+  }
+  h4 {
+    font-size: 7.8rem;
+    line-height: 1.0191999999999999;
+    font-weight: normal;
+    margin: 40px 0;
+
+    span {
+      font-size: 4.2rem;
+      line-height: 1.2207999999999999;
+    }
+  }
+}
+
+.message {
+  font-size: 2.8rem;
+  line-height: 1.2992;
+}
+
+.rspv {
+  font-size: 2.8rem;
+  line-height: 1.2992;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: .8rem;
+  }
+
+  .nanu-lexy {
+    h4 {
+      font-size: 1.8rem;
+
+      span {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .message {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .rspv {
+    font-size: 1.8rem;
+  }
+}

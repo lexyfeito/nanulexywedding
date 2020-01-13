@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Dancing Script', cursive;
+  height: 100%;
+}
+
+body {
+  display: flex;
+}
+
+
+.nl-button {
+  color: #000;
+  border: 2px solid #000;
+  background: transparent;
+  padding: 1.3rem 2.171rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.page-contrainer {
+  background-color: #fafafa;
+  padding: 30px 10px;
+}
+
+@media only screen and (max-width: 450px) {
+
+}

@@ -1,0 +1,68 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rspv-title {
+  font-size: 7.8rem;
+  margin: 30px 0;
+}
+
+.rspv-by {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.rspv-control {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 1.1rem;
+    font-weight: 400;
+    &.invisible {
+      visibility: hidden;
+    }
+    &.required:after{
+      content: '*';
+    }
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.rspv-control.error {
+  label:nth-child(1) {
+    color: red;
+  }
+  input {
+    border-color: red;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .rspv-title {
+    font-size: 2.8rem;
+  }
+
+  .rspv-by {
+    font-size: 1rem;
+  }
+}
