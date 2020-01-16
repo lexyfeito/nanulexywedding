@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {
-    path: '', loadChildren: './home/home.module#HomeModule'
-  },
+  // {
+  //   path: '', loadChildren: './home/home.module#HomeModule'
+  // },
   {
     path: 'wedding', loadChildren: './wedding/wedding.module#WeddingModule'
   },
@@ -17,6 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'rspv', loadChildren: './rspv/rspv.module#RspvModule'
+  },
+  {
+    path: '', loadChildren: './countdown/countdown.module#CountdownModule'
   }
 ];
 
