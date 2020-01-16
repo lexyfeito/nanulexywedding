@@ -4,3 +4,15 @@
 .coming-soon {
   font-size: 2.6rem;
 }
+
+.details-message-1 {
+  font-size: 2.3rem;
+  line-height: 1.2992;
+  text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+  .details-message-1 {
+    font-size: 1.4rem;
+  }
+}
