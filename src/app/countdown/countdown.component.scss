@@ -1,16 +1,21 @@
 .countdown-container {
   background-image: url("../../assets/wedding-image.jpg");
   background-position: center;
+  background-repeat: no-repeat;
   height: 747px;
+  border-radius: 5px;
 
   .countdown {
     position: absolute;
     background-color: rgba(0, 0, 0, .5);
     padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
 
     label {
       color: white;
       font-size: 2.7rem;
+      font-family: 'Roboto', sans-serif;
     }
   }
 }
@@ -59,7 +64,7 @@
   .countdown-container {
     .countdown {
       label {
-        font-size: 1.2rem;
+        font-size: 30px;
       }
     }
   }
@@ -69,7 +74,27 @@
   .countdown-container {
     .countdown {
       label {
-        font-size: 1rem;
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .countdown-container {
+    .countdown {
+      label {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .countdown-container {
+    .countdown {
+      label {
+        font-size: 21px;
       }
     }
   }

@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-countdown',
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.scss']
 })
-export class CountdownComponent implements OnInit {
+export class CountdownComponent implements OnInit, OnDestroy {
 
   interval;
   countdown;
+  showInterval: boolean;
   private countDownDate = new Date('April 3, 2020 11:00:00').getTime();
   constructor() { }
 
@@ -27,13 +28,20 @@ export class CountdownComponent implements OnInit {
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Output the result in an element with id='demo'
-      this.countdown = days + ' Days ' + hours + ' Hours ' + minutes + ' Minutes ' + seconds + ' Seconds ';
-
-      // If the count down is over, write some text
-      if (distance < 0) {
-        clearInterval(this.interval);
+      this.countdown = days + ' D ' + hours + ' Hr ' + minutes + ' Min ' + seconds + ' Sec ';
+      if (!this.showInterval) {
+        this.showCountdown();
       }
     }, 1000);
   }
 
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
+  }
+
+  private showCountdown() {
+    setTimeout(() => {
+      this.showInterval = true;
+    }, 500);
+  }
 }
